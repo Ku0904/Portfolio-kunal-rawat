@@ -1,0 +1,13 @@
+streamlit
+numpy
+pandas
+matplotlib
+seaborn
+statsmodels
+prophet
+keras
+scikit-learn
+requests
+python-dotenv
+Pillow
+google-generativeai
