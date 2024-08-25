@@ -8,7 +8,6 @@ from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.tsa.stattools import adfuller
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 from statsmodels.tsa.statespace.sarimax import SARIMAX
-from prophet import Prophet
 from sklearn.preprocessing import MinMaxScaler
 from keras.models import Sequential
 from keras.layers import LSTM, Dense
@@ -19,6 +18,7 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.svm import SVR
 from sklearn.metrics import mean_squared_error, r2_score
 
+# Load Data
 data = pd.read_csv(r'views\temperatures.csv')
 
 # Streamlit UI Setup
@@ -84,18 +84,6 @@ plt.figure(figsize=(14, 7))
 plt.plot(data.index, data['ANNUAL'], label='Historical Data')
 plt.plot(pd.date_range(start=data.index[-1], periods=11, freq='Y')[1:], forecast_sarima, label='Forecast', color='red')
 st.pyplot(plt)
-
-# Prophet Model for Forecasting
-st.header("Prophet Model Forecast")
-prophet_data = data.reset_index().rename(columns={'YEAR': 'ds', 'ANNUAL': 'y'})
-model_prophet = Prophet(yearly_seasonality=True)
-model_prophet.fit(prophet_data)
-
-# Prophet Forecast Plot
-future = model_prophet.make_future_dataframe(periods=10, freq='Y')
-forecast_prophet = model_prophet.predict(future)
-fig = model_prophet.plot(forecast_prophet)
-st.pyplot(fig)
 
 # LSTM for Time Series Prediction
 st.header("LSTM Model Forecast")
