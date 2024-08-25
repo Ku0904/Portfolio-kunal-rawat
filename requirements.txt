@@ -1,10 +1,13 @@
 streamlit
+statsmodels
 numpy
+tensorflow
 pandas
 matplotlib
 seaborn
 statsmodels
 prophet
+keras.models
 keras
 scikit-learn
 requests
