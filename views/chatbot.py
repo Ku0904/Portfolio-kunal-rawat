@@ -3,7 +3,6 @@ from dotenv import load_dotenv
 import os
 from PIL import Image
 import google.generativeai as genai
-from dotenv import load_dotenv
 
 # Load environment variables from secrets.toml
 load_dotenv()  # Ensure this points to the correct environment file if needed
