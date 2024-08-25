@@ -22,7 +22,6 @@ pytest==8.1.1
 pytest-playwright==0.4.4
 
 # Database
-psycopg2-binary==2.9.9
 SQLAlchemy==2.0.29
 
 # Additional Utilities
