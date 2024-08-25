@@ -19,11 +19,7 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.svm import SVR
 from sklearn.metrics import mean_squared_error, r2_score
 
-uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
-
-if uploaded_file is not None:
-    # Read the CSV file
-    data = pd.read_csv(uploaded_file)
+data = pd.read_csv(r'views\temperatures.csv')
 
 # Streamlit UI Setup
 st.title("Temperature Analysis and Forecasting")
