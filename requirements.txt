@@ -206,7 +206,6 @@ prophet==1.1.5
 proto-plus==1.23.0
 protobuf==4.25.3
 psutil==5.9.8
-psycopg2==2.9.9
 pure-eval==0.2.2
 pyarrow==17.0.0
 pyasn1==0.4.8
