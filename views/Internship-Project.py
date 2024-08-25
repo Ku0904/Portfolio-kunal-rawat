@@ -18,8 +18,10 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.svm import SVR
 from sklearn.metrics import mean_squared_error, r2_score
+import os
 
-data = pd.read_csv(r'views\temperatures.csv')
+file_path = os.getenv('views/temperatures.csv', 'temperatures.csv')
+data = pd.read_csv(file_path)
 
 # Streamlit UI Setup
 st.title("Temperature Analysis and Forecasting")
