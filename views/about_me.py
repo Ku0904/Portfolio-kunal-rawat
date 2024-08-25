@@ -1,6 +1,5 @@
 import streamlit as st
 from forms.contact import contact_form
-from dotenv import load_dotenv
 
 @st.experimental_dialog("Contact Me")
 def show_contact_form():
