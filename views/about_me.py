@@ -13,7 +13,7 @@ with col1:
 with col2:
     st.title("Kunal Rawat", anchor=False)
     st.write(
-        "4th-year B.Tech student in Industrial Internet of Things, preparing for placement in service-based companies."
+        "4th-year B.Tech student in Industrial Internet of Things from USAR."
     )
     st.write("Areas of Interest: Gen AI and Cloud Computing.")
     if st.button("✉️ Contact Me"):
