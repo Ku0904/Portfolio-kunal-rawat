@@ -19,7 +19,7 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.svm import SVR
 from sklearn.metrics import mean_squared_error, r2_score
 
-data = pd.read_csv(r'views\temperatures.csv')
+data = pd.read_csv('views/temperatures.csv')
 
 # Streamlit UI Setup
 st.title("Temperature Analysis and Forecasting")
